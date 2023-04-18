@@ -5,9 +5,6 @@ class DirectMessager(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
     self.spamMembers = {}
-
-  @commands.Cog.listener()
-  async def on_ready(self):
     self.spammingUsers.start()
 
   @tasks.loop(seconds=10)

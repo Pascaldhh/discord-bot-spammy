@@ -21,6 +21,7 @@ class BasicBot(commands.Bot):
     await self.load_extension(name="src.Greetings")
     await self.load_extension(name="src.DirectMessager")
     await self.load_extension(name="src.React")
+    await self.load_extension(name="src.Quoter")
 
 bot = BasicBot(command_prefix="?", intents=discord.Intents.all())
 bot.run(TOKEN)

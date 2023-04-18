@@ -20,6 +20,7 @@ class BasicBot(commands.Bot):
   async def loading_extensions(self):
     await self.load_extension(name="src.Greetings")
     await self.load_extension(name="src.DirectMessager")
+    await self.load_extension(name="src.React")
 
 bot = BasicBot(command_prefix="?", intents=discord.Intents.all())
 bot.run(TOKEN)
